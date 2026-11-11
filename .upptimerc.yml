@@ -16,9 +16,9 @@ sites:
     icon: https://pizza.echowebprogramming.click/jwt-pizza-icon.png
 
 status-website:
-  # No custom domain: the page is served from GitHub Pages at
-  # https://hkamm123.github.io/jwt-pizza-status/
-  baseUrl: /jwt-pizza-status
+  # Custom domain for GitHub Pages. Cloudflare has a DNS-only CNAME
+  # status.pizza -> hkamm123.github.io, and Upptime writes the CNAME file.
+  cname: status.pizza.echowebprogramming.click
   logoUrl: https://pizza.echowebprogramming.click/jwt-pizza-icon.png
   name: JWT Pizza Status
   introTitle: "**JWT Pizza** service status"
