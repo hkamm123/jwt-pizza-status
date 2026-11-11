@@ -1,31 +1,32 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: hkamm123 # GitHub user that owns this repository
+repo: jwt-pizza-status # Name of this repository
 
+# Each site is checked every 5 minutes by .github/workflows/uptime.yml.
+# A non-2xx response (or a timeout) opens a GitHub Issue; recovery closes it.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: JWT Pizza
+    url: https://pizza.echowebprogramming.click
+    icon: https://pizza.echowebprogramming.click/jwt-pizza-icon.png
+  - name: JWT Pizza Service
+    # The root endpoint returns the welcome message and version without
+    # querying the database, so these checks don't keep Aurora from pausing.
+    url: https://pizza-service.echowebprogramming.click
+    expectedStatusCodes:
+      - 200
+    icon: https://pizza.echowebprogramming.click/jwt-pizza-icon.png
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # No custom domain: the page is served from GitHub Pages at
+  # https://hkamm123.github.io/jwt-pizza-status/
+  baseUrl: /jwt-pizza-status
+  logoUrl: https://pizza.echowebprogramming.click/jwt-pizza-icon.png
+  name: JWT Pizza Status
+  introTitle: "**JWT Pizza** service status"
+  introMessage: Live uptime and response times for the JWT Pizza website and its backend service. Checks run every 5 minutes from GitHub Actions.
   navbar:
     - title: Status
       href: /
+    - title: JWT Pizza
+      href: https://pizza.echowebprogramming.click
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
